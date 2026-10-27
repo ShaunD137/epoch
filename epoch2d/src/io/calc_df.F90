@@ -1272,7 +1272,7 @@ CONTAINS
     END IF
 
     DO ispecies = spec_start, spec_end
-      IF (io_list(ispecies)%species_type == c_species_id_photon) CYCLE
+      ! IF (io_list(ispecies)%species_type == c_species_id_photon) CYCLE ! THIS HAS BEEN COMMENTED OUT
 #ifndef NO_TRACER_PARTICLES
       IF (spec_sum .AND. io_list(ispecies)%zero_current) CYCLE
 #endif
